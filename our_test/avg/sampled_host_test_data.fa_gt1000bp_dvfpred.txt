@@ -1,0 +1,44 @@
+name	len	score	pvalue
+AABF01.34 gi|27887285|gb|AABF01000034.1| Fusobacterium vincentii ATCC 49256 Contig0346, whole genome shotgun sequence length=17185	17185	0.2895318567752838	0.12358393408856849
+AADV02.80 gi|67853946|gb|AADV02000080.1| Crocosphaera watsonii WH 8501 ctg276, whole genome shotgun sequence length=16614	16614	0.48732444643974304	0.05458290422245108
+AADR01.51 gi|47017819|gb|AADR01000051.1| Listeria monocytogenes serotype 4b str. H7858 strain 4b H7858 cont530, whole genome shotgun sequence length=14790	14790	0.24640443921089172	0.13697219361483007
+AABF01.20 gi|27887580|gb|AABF01000020.1| Fusobacterium vincentii ATCC 49256 Contig0371, whole genome shotgun sequence length=24607	24607	0.43321526050567627	0.07003089598352215
+AAEQ01.21 gi|48237832|gb|AAEQ01000021.1| Bacillus anthracis str. Kruger B cont992, whole genome shotgun sequence length=50779	50779	0.23428142070770264	0.14521112255406798
+AABF01.4 gi|27888043|gb|AABF01000004.1| Fusobacterium vincentii ATCC 49256 Contig0374, whole genome shotgun sequence length=34741	34741	0.1340131014585495	0.2255406797116375
+AAES01.48 gi|48237900|gb|AAES01000048.1| Bacillus anthracis str. Australia 94 plasmid pXO1 cont73, whole genome shotgun sequence length=182566	182566	0.19440223276615143	0.1678681771369722
+NZ_AAHO01000035.1 Burkholderia mallei GB8 horse 4 contig_426, whole genome shotgun sequence	51734	0.014532731845974922	0.45829042224510813
+AAHN02.67 gi|99031348|gb|AAHN02000067.1| Burkholderia mallei ATCC 10399 ctg_1047276661930, whole genome shotgun sequence length=1055	1055	0.0020829755812883377	0.5859938208032955
+AADV02.57 gi|67854382|gb|AADV02000057.1| Crocosphaera watsonii WH 8501 ctg309, whole genome shotgun sequence length=21611	21611	0.5125951766967773	0.04531410916580844
+AAGB01.440 gi|58533253|gb|AAGB01000440.1| Wolbachia endosymbiont of Drosophila ananassae isolate wAna gdan_184, whole genome shotgun sequence length=1035	1035	0.6377182006835938	0.01956745623069001
+AAGP01.37 gi|62362107|gb|AAGP01000037.1| Brevibacterium aurantiacum strain BL2 2662183_Cont218, whole genome shotgun sequence length=51925	51925	0.7596817016601562	0.005149330587023687
+AAFV01.119 gi|56791126|gb|AAFV01000119.1| Streptococcus pyogenes M49 591 sp001.198.786, whole genome shotgun sequence length=3895	3895	0.6951262354850769	0.010298661174047374
+AAFV01.168 gi|56791077|gb|AAFV01000168.1| Streptococcus pyogenes M49 591 sp001.215.975, whole genome shotgun sequence length=2137	2137	0.5643771886825562	0.03192584963954686
+AAHN02.15 gi|99031400|gb|AAHN02000015.1| Burkholderia mallei ATCC 10399 ctg_1047276662039, whole genome shotgun sequence length=127222	127222	0.012229623273015022	0.47785787847579814
+AADQ01.14 gi|47015571|gb|AADQ01000014.1| Listeria monocytogenes serotype 1/2a str. F6854 strain 1/2a F6854 cont343, whole genome shotgun sequence length=62669	62669	0.3729705810546875	0.09062821833161688
+AAGB01.348 gi|58533521|gb|AAGB01000348.1| Wolbachia endosymbiont of Drosophila ananassae isolate wAna gdan_39, whole genome shotgun sequence length=1195	1195	0.37446165084838867	0.08856848609680741
+AADR01.142 gi|47017057|gb|AADR01000142.1| Listeria monocytogenes serotype 4b str. H7858 strain 4b H7858 cont626, whole genome shotgun sequence length=1677	1677	0.46541470289230347	0.06282183316168898
+AAEN01.30 gi|48093096|gb|AAEN01000030.1| Bacillus anthracis str. CNEVA-9066 plasmid pXO2 cont2251, whole genome shotgun sequence length=95646	95646	0.24285872280597687	0.13903192584963955
+AAGB01.242 gi|58533831|gb|AAGB01000242.1| Wolbachia endosymbiont of Drosophila ananassae isolate wAna gdan_215, whole genome shotgun sequence length=1382	1382	0.4108758270740509	0.07621009268795056
+AADV02.155 gi|67852927|gb|AADV02000155.1| Crocosphaera watsonii WH 8501 ctg192, whole genome shotgun sequence length=10380	10380	0.5585581064224243	0.03398558187435633
+AAGB01.343 gi|58533533|gb|AAGB01000343.1| Wolbachia endosymbiont of Drosophila ananassae isolate wAna gdan_244, whole genome shotgun sequence length=1201	1201	0.43559712171554565	0.06797116374871266
+AAEW02.27 gi|95132744|gb|AAEW02000027.1| Desulfuromonas acetoxidans DSM 684 ctg39, whole genome shotgun sequence length=28154	28154	0.7538690567016602	0.006179196704428424
+AAEO01.20 gi|48093149|gb|AAEO01000020.1| Bacillus anthracis str. A1055 cont235, whole genome shotgun sequence length=94212	94212	0.23116040229797363	0.1462409886714727
+AADV02.211 gi|67852434|gb|AADV02000211.1| Crocosphaera watsonii WH 8501 ctg131, whole genome shotgun sequence length=6331	6331	0.3100002408027649	0.11225540679711637
+AAGB01.51 gi|58534635|gb|AAGB01000051.1| Wolbachia endosymbiont of Drosophila ananassae isolate wAna gdan_365, whole genome shotgun sequence length=6791	6791	0.43998098373413086	0.06797116374871266
+AAFV01.193 gi|56791052|gb|AAFV01000193.1| Streptococcus pyogenes M49 591 sp001.139.396, whole genome shotgun sequence length=1741	1741	0.7495721578598022	0.006179196704428424
+NZ_AAHO01000065.1 Burkholderia mallei GB8 horse 4 contig_433, whole genome shotgun sequence	31833	0.1767469346523285	0.1822863027806385
+AAGB01.35 gi|58534793|gb|AAGB01000035.1| Wolbachia endosymbiont of Drosophila ananassae isolate wAna gdan_455, whole genome shotgun sequence length=9332	9332	0.5005230903625488	0.05046343975283213
+AADV02.265 gi|67852099|gb|AADV02000265.1| Crocosphaera watsonii WH 8501 ctg109, whole genome shotgun sequence length=3735	3735	0.6149139404296875	0.02059732234809475
+AABF01.163 gi|27885959|gb|AABF01000163.1| Fusobacterium vincentii ATCC 49256 Contig0193, whole genome shotgun sequence length=2687	2687	0.17185157537460327	0.1874356333676622
+AAGB01.204 gi|58533955|gb|AAGB01000204.1| Wolbachia endosymbiont of Drosophila ananassae isolate wAna gdan_251, whole genome shotgun sequence length=1471	1471	0.5598703622817993	0.03398558187435633
+AAFV01.291 gi|56790954|gb|AAFV01000291.1| Streptococcus pyogenes M49 591 sp001.91.207, whole genome shotgun sequence length=1016	1016	0.8985591530799866	0.0
+AAGC01.6 gi|58537120|gb|AAGC01000006.1| Wolbachia endosymbiont of Drosophila simulans gdsi_249, whole genome shotgun sequence length=8405	8405	0.37525758147239685	0.08856848609680741
+AADR01.72 gi|47017533|gb|AADR01000072.1| Listeria monocytogenes serotype 4b str. H7858 strain 4b H7858 cont661, whole genome shotgun sequence length=9466	9466	0.1464947611093521	0.21112255406797117
+AAFJ01.13 gi|57015533|gb|AAFJ01000013.1| Campylobacter upsaliensis RM3195 cont175, whole genome shotgun sequence length=38817	38817	0.22314202785491943	0.1513903192584964
+AADV02.158 gi|67852892|gb|AADV02000158.1| Crocosphaera watsonii WH 8501 ctg212, whole genome shotgun sequence length=10265	10265	0.5693354606628418	0.030895983522142123
+AAFV01.153 gi|56791092|gb|AAFV01000153.1| Streptococcus pyogenes M49 591 sp001.170.566, whole genome shotgun sequence length=2806	2806	0.6660833358764648	0.017507723995880537
+AADV02.61 gi|67854301|gb|AADV02000061.1| Crocosphaera watsonii WH 8501 ctg297, whole genome shotgun sequence length=20351	20351	0.4711024761199951	0.0607621009268795
+AAGC01.263 gi|58536115|gb|AAGC01000263.1| Wolbachia endosymbiont of Drosophila simulans gdsi_59, whole genome shotgun sequence length=1338	1338	0.8072398900985718	0.0020597322348094747
+AAEW02.3 gi|95135031|gb|AAEW02000003.1| Desulfuromonas acetoxidans DSM 684 ctg61, whole genome shotgun sequence length=244141	244141	0.7308932542800903	0.007209062821833162
+AAGC01.62 gi|58536813|gb|AAGC01000062.1| Wolbachia endosymbiont of Drosophila simulans gdsi_310, whole genome shotgun sequence length=3420	3420	0.34800636768341064	0.09680741503604531
+AAFV01.76 gi|56791169|gb|AAFV01000076.1| Streptococcus pyogenes M49 591 sp001.250.1599, whole genome shotgun sequence length=6197	6197	0.6076571345329285	0.02265705458290422
