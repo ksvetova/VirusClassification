@@ -13,5 +13,8 @@ class L1Pooling(K.layers.Layer):
         return input_shape[0], input_shape[1]
 
     def get_config(self):
-        base_config = super(L1Pooling, self).get_config()
-        return dict(list(base_config.items()))
+        return super(L1Pooling, self).get_config()
+
+    @classmethod
+    def from_config(cls, config):
+        return cls(**config)

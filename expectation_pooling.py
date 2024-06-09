@@ -26,10 +26,10 @@ class GlobalExpectationPooling1D(K.layers.Layer):
         """
 
     def __init__(self, mode=0, m_trainable=False, m_value=1, **kwargs):
-        super(GlobalExpectationPooling1D, self).__init__(**kwargs)
         self.m_value = m_value
         self.mode = mode
         self.m_trainable = m_trainable
+        super(GlobalExpectationPooling1D, self).__init__(**kwargs)
 
     def compute_output_shape(self, input_shape):
         return input_shape[0], input_shape[2]
@@ -65,8 +65,15 @@ class GlobalExpectationPooling1D(K.layers.Layer):
         return expectation
 
     def get_config(self):
-        base_config = super(GlobalExpectationPooling1D, self).get_config()
-        return dict(list(base_config.items()))
+        config = super(GlobalExpectationPooling1D, self).get_config()
+        config.update({"m_value": self.m_value})
+        config.update({"mode": self.mode})
+        config.update({"m_trainable": self.m_trainable})
+        return config
+
+    @classmethod
+    def from_config(cls, config):
+        return cls(**config)
 
     def build(self, input_shape):
         if self.m_trainable:
