@@ -1,0 +1,99 @@
+C:\Users\hp\miniconda3\envs\dvf\python.exe C:\Users\hp\Desktop\DeepVirFinder\DeepVirFinder\training_l1_pooling.py -l 500 -i ./train_example/tr/encode -j ./train_example/val/encode -k ./train_example/test/encode -o ./train_example/models -f 10 -n 100 -d 100 -e 30 
+Using TensorFlow backend.
+...loading data...
+...loading virus data...
+data for training virus#sampled_virus_train_data#0.5k_num1_seq8792_codefw.npy
+data for validation virus#sampled_virus_val_data#0.5k_num1_seq2443_codefw.npy
+data for test virus#sampled_virus_test_data#0.5k_num1_seq2637_codefw.npy
+...loading host data...
+data for training host#sampled_host_train_data#0.5k_num1_seq9287_codefw.npy
+data for validation host#sampled_host_val_data#0.5k_num1_seq1966_codefw.npy
+data for test host#sampled_host_test_data#0.5k_num1_seq2601_codefw.npy
+...combining V and H...
+...shuffling training data...
+WARNING:tensorflow:From C:\Users\hp\miniconda3\envs\dvf\lib\site-packages\keras\backend\tensorflow_backend.py:74: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+
+...building model...
+WARNING:tensorflow:From C:\Users\hp\miniconda3\envs\dvf\lib\site-packages\keras\backend\tensorflow_backend.py:517: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+WARNING:tensorflow:From C:\Users\hp\miniconda3\envs\dvf\lib\site-packages\keras\backend\tensorflow_backend.py:4138: The name tf.random_uniform is deprecated. Please use tf.random.uniform instead.
+
+WARNING:tensorflow:From C:\Users\hp\miniconda3\envs\dvf\lib\site-packages\keras\backend\tensorflow_backend.py:133: The name tf.placeholder_with_default is deprecated. Please use tf.compat.v1.placeholder_with_default instead.
+
+WARNING:tensorflow:From C:\Users\hp\miniconda3\envs\dvf\lib\site-packages\keras\backend\tensorflow_backend.py:3445: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+WARNING:tensorflow:From C:\Users\hp\miniconda3\envs\dvf\lib\site-packages\keras\optimizers.py:790: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+WARNING:tensorflow:From C:\Users\hp\miniconda3\envs\dvf\lib\site-packages\keras\backend\tensorflow_backend.py:3376: The name tf.log is deprecated. Please use tf.math.log instead.
+
+WARNING:tensorflow:From C:\Users\hp\miniconda3\envs\dvf\lib\site-packages\tensorflow_core\python\ops\nn_impl.py:183: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+...fitting model...
+0.5k_fl10_fn100_dn100_ep30
+WARNING:tensorflow:From C:\Users\hp\miniconda3\envs\dvf\lib\site-packages\keras\backend\tensorflow_backend.py:986: The name tf.assign_add is deprecated. Please use tf.compat.v1.assign_add instead.
+
+WARNING:tensorflow:From C:\Users\hp\miniconda3\envs\dvf\lib\site-packages\keras\backend\tensorflow_backend.py:973: The name tf.assign is deprecated. Please use tf.compat.v1.assign instead.
+
+WARNING:tensorflow:From C:\Users\hp\miniconda3\envs\dvf\lib\site-packages\keras\backend\tensorflow_backend.py:2741: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+Train on 18079 samples, validate on 4409 samples
+Epoch 1/30
+WARNING:tensorflow:From C:\Users\hp\miniconda3\envs\dvf\lib\site-packages\keras\backend\tensorflow_backend.py:174: The name tf.get_default_session is deprecated. Please use tf.compat.v1.get_default_session instead.
+
+WARNING:tensorflow:From C:\Users\hp\miniconda3\envs\dvf\lib\site-packages\keras\backend\tensorflow_backend.py:181: The name tf.ConfigProto is deprecated. Please use tf.compat.v1.ConfigProto instead.
+
+2024-06-10 21:31:38.592916: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX AVX2
+WARNING:tensorflow:From C:\Users\hp\miniconda3\envs\dvf\lib\site-packages\keras\backend\tensorflow_backend.py:190: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+WARNING:tensorflow:From C:\Users\hp\miniconda3\envs\dvf\lib\site-packages\keras\backend\tensorflow_backend.py:199: The name tf.is_variable_initialized is deprecated. Please use tf.compat.v1.is_variable_initialized instead.
+
+WARNING:tensorflow:From C:\Users\hp\miniconda3\envs\dvf\lib\site-packages\keras\backend\tensorflow_backend.py:206: The name tf.variables_initializer is deprecated. Please use tf.compat.v1.variables_initializer instead.
+
+ - 27s - loss: 0.6983 - acc: 0.5191 - val_loss: 0.6034 - val_acc: 0.6194
+
+Epoch 00001: val_loss improved from inf to 0.60341, saving model to ./train_example/models\model_siamese_varlen_0.5k_fl10_fn100_dn100.h5
+Epoch 2/30
+ - 27s - loss: 0.6173 - acc: 0.6441 - val_loss: 0.5266 - val_acc: 0.7079
+
+Epoch 00002: val_loss improved from 0.60341 to 0.52656, saving model to ./train_example/models\model_siamese_varlen_0.5k_fl10_fn100_dn100.h5
+Epoch 3/30
+ - 25s - loss: 0.5768 - acc: 0.6858 - val_loss: 0.4296 - val_acc: 0.8197
+
+Epoch 00003: val_loss improved from 0.52656 to 0.42962, saving model to ./train_example/models\model_siamese_varlen_0.5k_fl10_fn100_dn100.h5
+Epoch 4/30
+ - 25s - loss: 0.5389 - acc: 0.7216 - val_loss: 0.4432 - val_acc: 0.7893
+
+Epoch 00004: val_loss did not improve from 0.42962
+Epoch 5/30
+ - 25s - loss: 0.5154 - acc: 0.7421 - val_loss: 0.4215 - val_acc: 0.7993
+
+Epoch 00005: val_loss improved from 0.42962 to 0.42147, saving model to ./train_example/models\model_siamese_varlen_0.5k_fl10_fn100_dn100.h5
+Epoch 6/30
+ - 25s - loss: 0.4993 - acc: 0.7535 - val_loss: 0.4165 - val_acc: 0.8043
+
+Epoch 00006: val_loss improved from 0.42147 to 0.41646, saving model to ./train_example/models\model_siamese_varlen_0.5k_fl10_fn100_dn100.h5
+Epoch 7/30
+ - 25s - loss: 0.4809 - acc: 0.7644 - val_loss: 0.4120 - val_acc: 0.8090
+
+Epoch 00007: val_loss improved from 0.41646 to 0.41199, saving model to ./train_example/models\model_siamese_varlen_0.5k_fl10_fn100_dn100.h5
+Epoch 8/30
+ - 25s - loss: 0.4555 - acc: 0.7801 - val_loss: 0.4127 - val_acc: 0.8088
+
+Epoch 00008: val_loss did not improve from 0.41199
+Epoch 00008: early stopping
+...predicting tr...
+
+auc_tr=0.921659144598597
+
+...predicting val...
+
+auc_val=0.8855604631998165
+
+...predicting test...
+
+auc_test=0.7650931200143698
+
+
+Process finished with exit code 0
