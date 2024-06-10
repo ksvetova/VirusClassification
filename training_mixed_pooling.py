@@ -4,7 +4,7 @@
 # author            :Jie Ren renj@usc.edu
 # date              :20180807
 # version           :1.0
-# usage             :python training.py -l 1000 -i ./train_example/tr/encode -j ./train_example/val/encode -o ./train_example/models -f 10 -n 1000 -d 1000 -e 50
+# usage             :python training.py -l 1000 -i ./train_example/tr/encode -j ./train_example/val/encode -k ./train_example/test/encode -o ./train_example/models -f 10 -n 1000 -d 1000 -e 50 -p 0.5
 # required packages :numpy, theano, keras, scikit-learn, Biopython
 # conda create -n dvf python=3.6 numpy theano keras scikit-learn Biopython
 #==============================================================================
@@ -40,6 +40,8 @@ parser.add_option("-i", "--intr", action = "store", type = "string", dest = "inD
 									default='./', help = "input directory for training data")
 parser.add_option("-j", "--inval", action = "store", type = "string", dest = "inDirVal",
 									default='./', help = "input directory for validation data")
+parser.add_option("-k", "--intest", action = "store", type = "string", dest = "inDirTest",
+									default='./', help = "input directory for test data")
                   # "/auto/cmb-12/fs3/renj/DL/data/year2014/encode"
 parser.add_option("-o", "--out", action = "store", type = "string", dest = "outDir",
 									default='./', help = "output directory")
@@ -70,6 +72,7 @@ nb_filter1 = options.nb_filter1
 nb_dense = options.nb_dense
 inDirTr = options.inDirTr
 inDirVal = options.inDirVal
+inDirTest = options.inDirTest
 outDir = options.outDir
 if not os.path.exists(outDir):
     os.makedirs(outDir)
@@ -103,6 +106,11 @@ filename_codevalfw = [ x for x in os.listdir(inDirVal) if 'codefw.npy' in x and 
 print("data for validation " + filename_codevalfw)
 phageRef_codevalfw = np.load(os.path.join(inDirVal, filename_codevalfw))
 phageRef_codevalbw = np.load(os.path.join(inDirVal, filename_codevalfw.replace('fw', 'bw')))
+# test
+filename_codetestfw = [ x for x in os.listdir(inDirTest) if 'codefw.npy' in x and 'virus' in x and contigLengthk + 'k' in x ][0]
+print("data for test " + filename_codetestfw)
+phageRef_codetestfw = np.load(os.path.join(inDirTest, filename_codetestfw))
+phageRef_codetestbw = np.load(os.path.join(inDirTest, filename_codetestfw.replace('fw', 'bw')))
 
 
 ## host RefSeq
@@ -117,6 +125,11 @@ filename_codevalfw = [ x for x in os.listdir(inDirVal) if 'codefw.npy' in x and 
 print("data for validation " + filename_codevalfw)
 hostRef_codevalfw = np.load(os.path.join(inDirVal, filename_codevalfw))
 hostRef_codevalbw = np.load(os.path.join(inDirVal, filename_codevalfw.replace('fw', 'bw')))
+# test
+filename_codetestfw = [ x for x in os.listdir(inDirTest) if 'codefw.npy' in x and 'host' in x and contigLengthk + 'k' in x ][0]
+print("data for test " + filename_codetestfw)
+hostRef_codetestfw = np.load(os.path.join(inDirTest, filename_codetestfw))
+hostRef_codetestbw = np.load(os.path.join(inDirTest, filename_codetestfw.replace('fw', 'bw')))
 
 
 ######## combine V and H, shuf training data ##########
@@ -143,6 +156,13 @@ X_valfw = np.concatenate((hostRef_codevalfw, phageRef_codevalfw), axis=0)
 del hostRef_codevalfw, phageRef_codevalfw
 X_valbw = np.concatenate((hostRef_codevalbw, phageRef_codevalbw), axis=0)
 del hostRef_codevalbw, phageRef_codevalbw
+
+### test V+B
+Y_test = np.concatenate((np.repeat(0, hostRef_codetestfw.shape[0]), np.repeat(1, phageRef_codetestfw.shape[0])))
+X_testfw = np.concatenate((hostRef_codetestfw, phageRef_codetestfw), axis=0)
+del hostRef_codetestfw, phageRef_codetestfw
+X_testbw = np.concatenate((hostRef_codetestbw, phageRef_codetestbw), axis=0)
+del hostRef_codetestbw, phageRef_codetestbw
 
 
 ######### training model #############
@@ -226,6 +246,18 @@ type = 'val'
 X_fw = X_valfw
 X_bw = X_valbw
 Y = Y_val
+print("...predicting "+type+"...\n")
+Y_pred = model.predict([X_fw, X_bw], batch_size=1)
+auc = sklearn.metrics.roc_auc_score(Y, Y_pred)
+print('auc_'+type+'='+str(auc)+'\n')
+np.savetxt(os.path.join(outDir, modPattern + '_' + type + 'fw_Y_pred.txt'), np.transpose(Y_pred))
+np.savetxt(os.path.join(outDir, modPattern + '_' + type + 'fw_Y_true.txt'), np.transpose(Y))
+
+# test data
+type = 'test'
+X_fw = X_testfw
+X_bw = X_testbw
+Y = Y_test
 print("...predicting "+type+"...\n")
 Y_pred = model.predict([X_fw, X_bw], batch_size=1)
 auc = sklearn.metrics.roc_auc_score(Y, Y_pred)
